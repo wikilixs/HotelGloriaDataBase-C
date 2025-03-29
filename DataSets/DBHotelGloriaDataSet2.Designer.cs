@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace HotelGloriaDataBase {
+namespace HotelGloriaDataBase.DataSets {
     
     
     /// <summary>
@@ -1114,7 +1114,7 @@ namespace HotelGloriaDataBase {
         }
     }
 }
-namespace HotelGloriaDataBase.DBHotelGloriaDataSet2TableAdapters {
+namespace HotelGloriaDataBase.DataSets.DBHotelGloriaDataSet2TableAdapters {
     
     
     /// <summary>

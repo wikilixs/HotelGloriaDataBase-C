@@ -55,17 +55,17 @@
     <Compile Include="BLL\BllHorario.cs" />
     <Compile Include="BLL\BllPersonal.cs" />
     <Compile Include="BLL\BllSalario.cs" />
-    <Compile Include="DBHotelGloriaDataSet.Designer.cs">
+    <Compile Include="DataSets\DBHotelGloriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBHotelGloriaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DBHotelGloriaDataSet1.Designer.cs">
+    <Compile Include="DataSets\DBHotelGloriaDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBHotelGloriaDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DBHotelGloriaDataSet2.Designer.cs">
+    <Compile Include="DataSets\DBHotelGloriaDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DBHotelGloriaDataSet2.xsd</DependentUpon>
@@ -117,37 +117,37 @@
     <EmbeddedResource Include="UI\viewPersonal.resx">
       <DependentUpon>viewPersonal.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DBHotelGloriaDataSet.xsc">
+    <None Include="DataSets\DBHotelGloriaDataSet.xsc">
       <DependentUpon>DBHotelGloriaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DBHotelGloriaDataSet.xsd">
+    <None Include="DataSets\DBHotelGloriaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DBHotelGloriaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBHotelGloriaDataSet.xss">
+    <None Include="DataSets\DBHotelGloriaDataSet.xss">
       <DependentUpon>DBHotelGloriaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DBHotelGloriaDataSet1.xsc">
+    <None Include="DataSets\DBHotelGloriaDataSet1.xsc">
       <DependentUpon>DBHotelGloriaDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DBHotelGloriaDataSet1.xsd">
+    <None Include="DataSets\DBHotelGloriaDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DBHotelGloriaDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBHotelGloriaDataSet1.xss">
+    <None Include="DataSets\DBHotelGloriaDataSet1.xss">
       <DependentUpon>DBHotelGloriaDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="DBHotelGloriaDataSet2.xsc">
+    <None Include="DataSets\DBHotelGloriaDataSet2.xsc">
       <DependentUpon>DBHotelGloriaDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="DBHotelGloriaDataSet2.xsd">
+    <None Include="DataSets\DBHotelGloriaDataSet2.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DBHotelGloriaDataSet2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DBHotelGloriaDataSet2.xss">
+    <None Include="DataSets\DBHotelGloriaDataSet2.xss">
       <DependentUpon>DBHotelGloriaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">

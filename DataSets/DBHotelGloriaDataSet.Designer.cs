@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace HotelGloriaDataBase {
+namespace HotelGloriaDataBase.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace HotelGloriaDataBase {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DBHotelGloriaDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DBHotelGloriaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DBHotelGloriaDataSet1 : global::System.Data.DataSet {
+    public partial class DBHotelGloriaDataSet : global::System.Data.DataSet {
         
-        private TSalarioDataTable tableTSalario;
+        private TCargoDataTable tableTCargo;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DBHotelGloriaDataSet1() {
+        public DBHotelGloriaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace HotelGloriaDataBase {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DBHotelGloriaDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DBHotelGloriaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace HotelGloriaDataBase {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["TSalario"] != null)) {
-                    base.Tables.Add(new TSalarioDataTable(ds.Tables["TSalario"]));
+                if ((ds.Tables["TCargo"] != null)) {
+                    base.Tables.Add(new TCargoDataTable(ds.Tables["TCargo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace HotelGloriaDataBase {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TSalarioDataTable TSalario {
+        public TCargoDataTable TCargo {
             get {
-                return this.tableTSalario;
+                return this.tableTCargo;
             }
         }
         
@@ -127,7 +127,7 @@ namespace HotelGloriaDataBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DBHotelGloriaDataSet1 cln = ((DBHotelGloriaDataSet1)(base.Clone()));
+            DBHotelGloriaDataSet cln = ((DBHotelGloriaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace HotelGloriaDataBase {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["TSalario"] != null)) {
-                    base.Tables.Add(new TSalarioDataTable(ds.Tables["TSalario"]));
+                if ((ds.Tables["TCargo"] != null)) {
+                    base.Tables.Add(new TCargoDataTable(ds.Tables["TCargo"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace HotelGloriaDataBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTSalario = ((TSalarioDataTable)(base.Tables["TSalario"]));
+            this.tableTCargo = ((TCargoDataTable)(base.Tables["TCargo"]));
             if ((initTable == true)) {
-                if ((this.tableTSalario != null)) {
-                    this.tableTSalario.InitVars();
+                if ((this.tableTCargo != null)) {
+                    this.tableTCargo.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace HotelGloriaDataBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DBHotelGloriaDataSet1";
+            this.DataSetName = "DBHotelGloriaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DBHotelGloriaDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/DBHotelGloriaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTSalario = new TSalarioDataTable();
-            base.Tables.Add(this.tableTSalario);
+            this.tableTCargo = new TCargoDataTable();
+            base.Tables.Add(this.tableTCargo);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeTSalario() {
+        private bool ShouldSerializeTCargo() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace HotelGloriaDataBase {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DBHotelGloriaDataSet1 ds = new DBHotelGloriaDataSet1();
+            DBHotelGloriaDataSet ds = new DBHotelGloriaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,21 +270,21 @@ namespace HotelGloriaDataBase {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void TSalarioRowChangeEventHandler(object sender, TSalarioRowChangeEvent e);
+        public delegate void TCargoRowChangeEventHandler(object sender, TCargoRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TSalarioDataTable : global::System.Data.TypedTableBase<TSalarioRow> {
+        public partial class TCargoDataTable : global::System.Data.TypedTableBase<TCargoRow> {
             
-            private global::System.Data.DataColumn columnMonto_Salario;
+            private global::System.Data.DataColumn columnNombre_Cargo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TSalarioDataTable() {
-                this.TableName = "TSalario";
+            public TCargoDataTable() {
+                this.TableName = "TCargo";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +292,7 @@ namespace HotelGloriaDataBase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TSalarioDataTable(global::System.Data.DataTable table) {
+            internal TCargoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +309,16 @@ namespace HotelGloriaDataBase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected TSalarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TCargoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Monto_SalarioColumn {
+            public global::System.Data.DataColumn Nombre_CargoColumn {
                 get {
-                    return this.columnMonto_Salario;
+                    return this.columnNombre_Cargo;
                 }
             }
             
@@ -333,45 +333,45 @@ namespace HotelGloriaDataBase {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TSalarioRow this[int index] {
+            public TCargoRow this[int index] {
                 get {
-                    return ((TSalarioRow)(this.Rows[index]));
+                    return ((TCargoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TSalarioRowChangeEventHandler TSalarioRowChanging;
+            public event TCargoRowChangeEventHandler TCargoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TSalarioRowChangeEventHandler TSalarioRowChanged;
+            public event TCargoRowChangeEventHandler TCargoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TSalarioRowChangeEventHandler TSalarioRowDeleting;
+            public event TCargoRowChangeEventHandler TCargoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TSalarioRowChangeEventHandler TSalarioRowDeleted;
+            public event TCargoRowChangeEventHandler TCargoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddTSalarioRow(TSalarioRow row) {
+            public void AddTCargoRow(TCargoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TSalarioRow AddTSalarioRow(decimal Monto_Salario) {
-                TSalarioRow rowTSalarioRow = ((TSalarioRow)(this.NewRow()));
+            public TCargoRow AddTCargoRow(string Nombre_Cargo) {
+                TCargoRow rowTCargoRow = ((TCargoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Monto_Salario};
-                rowTSalarioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTSalarioRow);
-                return rowTSalarioRow;
+                        Nombre_Cargo};
+                rowTCargoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTCargoRow);
+                return rowTCargoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TSalarioDataTable cln = ((TSalarioDataTable)(base.Clone()));
+                TCargoDataTable cln = ((TCargoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,46 +379,48 @@ namespace HotelGloriaDataBase {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TSalarioDataTable();
+                return new TCargoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnMonto_Salario = base.Columns["Monto_Salario"];
+                this.columnNombre_Cargo = base.Columns["Nombre_Cargo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnMonto_Salario = new global::System.Data.DataColumn("Monto_Salario", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonto_Salario);
+                this.columnNombre_Cargo = new global::System.Data.DataColumn("Nombre_Cargo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_Cargo);
+                this.columnNombre_Cargo.AllowDBNull = false;
+                this.columnNombre_Cargo.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TSalarioRow NewTSalarioRow() {
-                return ((TSalarioRow)(this.NewRow()));
+            public TCargoRow NewTCargoRow() {
+                return ((TCargoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TSalarioRow(builder);
+                return new TCargoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TSalarioRow);
+                return typeof(TCargoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TSalarioRowChanged != null)) {
-                    this.TSalarioRowChanged(this, new TSalarioRowChangeEvent(((TSalarioRow)(e.Row)), e.Action));
+                if ((this.TCargoRowChanged != null)) {
+                    this.TCargoRowChanged(this, new TCargoRowChangeEvent(((TCargoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -426,8 +428,8 @@ namespace HotelGloriaDataBase {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TSalarioRowChanging != null)) {
-                    this.TSalarioRowChanging(this, new TSalarioRowChangeEvent(((TSalarioRow)(e.Row)), e.Action));
+                if ((this.TCargoRowChanging != null)) {
+                    this.TCargoRowChanging(this, new TCargoRowChangeEvent(((TCargoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -435,8 +437,8 @@ namespace HotelGloriaDataBase {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TSalarioRowDeleted != null)) {
-                    this.TSalarioRowDeleted(this, new TSalarioRowChangeEvent(((TSalarioRow)(e.Row)), e.Action));
+                if ((this.TCargoRowDeleted != null)) {
+                    this.TCargoRowDeleted(this, new TCargoRowChangeEvent(((TCargoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -444,14 +446,14 @@ namespace HotelGloriaDataBase {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TSalarioRowDeleting != null)) {
-                    this.TSalarioRowDeleting(this, new TSalarioRowChangeEvent(((TSalarioRow)(e.Row)), e.Action));
+                if ((this.TCargoRowDeleting != null)) {
+                    this.TCargoRowDeleting(this, new TCargoRowChangeEvent(((TCargoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveTSalarioRow(TSalarioRow row) {
+            public void RemoveTCargoRow(TCargoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -460,7 +462,7 @@ namespace HotelGloriaDataBase {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DBHotelGloriaDataSet1 ds = new DBHotelGloriaDataSet1();
+                DBHotelGloriaDataSet ds = new DBHotelGloriaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -478,7 +480,7 @@ namespace HotelGloriaDataBase {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TSalarioDataTable";
+                attribute2.FixedValue = "TCargoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -522,43 +524,26 @@ namespace HotelGloriaDataBase {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TSalarioRow : global::System.Data.DataRow {
+        public partial class TCargoRow : global::System.Data.DataRow {
             
-            private TSalarioDataTable tableTSalario;
+            private TCargoDataTable tableTCargo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TSalarioRow(global::System.Data.DataRowBuilder rb) : 
+            internal TCargoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTSalario = ((TSalarioDataTable)(this.Table));
+                this.tableTCargo = ((TCargoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Monto_Salario {
+            public string Nombre_Cargo {
                 get {
-                    try {
-                        return ((decimal)(this[this.tableTSalario.Monto_SalarioColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Monto_Salario\' de la tabla \'TSalario\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTCargo.Nombre_CargoColumn]));
                 }
                 set {
-                    this[this.tableTSalario.Monto_SalarioColumn] = value;
+                    this[this.tableTCargo.Nombre_CargoColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMonto_SalarioNull() {
-                return this.IsNull(this.tableTSalario.Monto_SalarioColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMonto_SalarioNull() {
-                this[this.tableTSalario.Monto_SalarioColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -566,22 +551,22 @@ namespace HotelGloriaDataBase {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class TSalarioRowChangeEvent : global::System.EventArgs {
+        public class TCargoRowChangeEvent : global::System.EventArgs {
             
-            private TSalarioRow eventRow;
+            private TCargoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TSalarioRowChangeEvent(TSalarioRow row, global::System.Data.DataRowAction action) {
+            public TCargoRowChangeEvent(TCargoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TSalarioRow Row {
+            public TCargoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -597,7 +582,7 @@ namespace HotelGloriaDataBase {
         }
     }
 }
-namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
+namespace HotelGloriaDataBase.DataSets.DBHotelGloriaDataSetTableAdapters {
     
     
     /// <summary>
@@ -609,7 +594,7 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TSalarioTableAdapter : global::System.ComponentModel.Component {
+    public partial class TCargoTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -623,7 +608,7 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TSalarioTableAdapter() {
+        public TCargoTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -720,14 +705,14 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "TSalario";
-            tableMapping.ColumnMappings.Add("Monto_Salario", "Monto_Salario");
+            tableMapping.DataSetTable = "TCargo";
+            tableMapping.ColumnMappings.Add("Nombre_Cargo", "Nombre_Cargo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TSalario] ([Monto_Salario]) VALUES (@Monto_Salario)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[TCargo] ([Nombre_Cargo]) VALUES (@Nombre_Cargo)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Monto_Salario", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "Monto_Salario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_Cargo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_Cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -743,7 +728,7 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Monto_Salario FROM dbo.TSalario";
+            this._commandCollection[0].CommandText = "SELECT Nombre_Cargo FROM dbo.TCargo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -751,7 +736,7 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DBHotelGloriaDataSet1.TSalarioDataTable dataTable) {
+        public virtual int Fill(DBHotelGloriaDataSet.TCargoDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -764,9 +749,9 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DBHotelGloriaDataSet1.TSalarioDataTable GetData() {
+        public virtual DBHotelGloriaDataSet.TCargoDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DBHotelGloriaDataSet1.TSalarioDataTable dataTable = new DBHotelGloriaDataSet1.TSalarioDataTable();
+            DBHotelGloriaDataSet.TCargoDataTable dataTable = new DBHotelGloriaDataSet.TCargoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -774,15 +759,15 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBHotelGloriaDataSet1.TSalarioDataTable dataTable) {
+        public virtual int Update(DBHotelGloriaDataSet.TCargoDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DBHotelGloriaDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "TSalario");
+        public virtual int Update(DBHotelGloriaDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "TCargo");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -804,12 +789,12 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<decimal> Monto_Salario) {
-            if ((Monto_Salario.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(Monto_Salario.Value));
+        public virtual int Insert(string Nombre_Cargo) {
+            if ((Nombre_Cargo == null)) {
+                throw new global::System.ArgumentNullException("Nombre_Cargo");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nombre_Cargo));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -840,7 +825,7 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private TSalarioTableAdapter _tSalarioTableAdapter;
+        private TCargoTableAdapter _tCargoTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -862,12 +847,12 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TSalarioTableAdapter TSalarioTableAdapter {
+        public TCargoTableAdapter TCargoTableAdapter {
             get {
-                return this._tSalarioTableAdapter;
+                return this._tCargoTableAdapter;
             }
             set {
-                this._tSalarioTableAdapter = value;
+                this._tCargoTableAdapter = value;
             }
         }
         
@@ -890,9 +875,9 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tSalarioTableAdapter != null) 
-                            && (this._tSalarioTableAdapter.Connection != null))) {
-                    return this._tSalarioTableAdapter.Connection;
+                if (((this._tCargoTableAdapter != null) 
+                            && (this._tCargoTableAdapter.Connection != null))) {
+                    return this._tCargoTableAdapter.Connection;
                 }
                 return null;
             }
@@ -907,7 +892,7 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tSalarioTableAdapter != null)) {
+                if ((this._tCargoTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -919,14 +904,14 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DBHotelGloriaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DBHotelGloriaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tSalarioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.TSalario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tCargoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TCargo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tSalarioTableAdapter.Update(updatedRows));
+                    result = (result + this._tCargoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -938,13 +923,13 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DBHotelGloriaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DBHotelGloriaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tSalarioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.TSalario.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tCargoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TCargo.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tSalarioTableAdapter.Update(addedRows));
+                    result = (result + this._tCargoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -956,13 +941,13 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DBHotelGloriaDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DBHotelGloriaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tSalarioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.TSalario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tCargoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TCargo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tSalarioTableAdapter.Update(deletedRows));
+                    result = (result + this._tCargoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -998,15 +983,15 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DBHotelGloriaDataSet1 dataSet) {
+        public virtual int UpdateAll(DBHotelGloriaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tSalarioTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tSalarioTableAdapter.Connection) == false))) {
+            if (((this._tCargoTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tCargoTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1042,13 +1027,13 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tSalarioTableAdapter != null)) {
-                    revertConnections.Add(this._tSalarioTableAdapter, this._tSalarioTableAdapter.Connection);
-                    this._tSalarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tSalarioTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tSalarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tSalarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tSalarioTableAdapter.Adapter);
+                if ((this._tCargoTableAdapter != null)) {
+                    revertConnections.Add(this._tCargoTableAdapter, this._tCargoTableAdapter.Connection);
+                    this._tCargoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tCargoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tCargoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tCargoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tCargoTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1109,9 +1094,9 @@ namespace HotelGloriaDataBase.DBHotelGloriaDataSet1TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._tSalarioTableAdapter != null)) {
-                    this._tSalarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tSalarioTableAdapter]));
-                    this._tSalarioTableAdapter.Transaction = null;
+                if ((this._tCargoTableAdapter != null)) {
+                    this._tCargoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tCargoTableAdapter]));
+                    this._tCargoTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
