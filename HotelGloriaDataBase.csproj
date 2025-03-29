@@ -46,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ALL\TPersonal.cs" />
     <Compile Include="ALL\connectionDB.cs" />
+    <Compile Include="ALL\AllCargo.cs" />
+    <Compile Include="ALL\AllHorario.cs" />
+    <Compile Include="ALL\AllPersonal.cs" />
+    <Compile Include="ALL\AllSalario.cs" />
+    <Compile Include="BLL\BllCargo.cs" />
+    <Compile Include="BLL\BllHorario.cs" />
+    <Compile Include="BLL\BllPersonal.cs" />
+    <Compile Include="BLL\BllSalario.cs" />
     <Compile Include="DBHotelGloriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,8 +163,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
