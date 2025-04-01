@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HotelGloriaDataBase
 {
-    public partial class viewBuscarPersonal : Form
+    public partial class Form2 : Form
     {
-        public viewBuscarPersonal()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <PreferNativeArm64>false</PreferNativeArm64>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +33,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HotelGloriaDataBase.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,40 +58,49 @@
     <Compile Include="ALL\AllSalario.cs" />
     <Compile Include="BLL\BllCargo.cs" />
     <Compile Include="BLL\BllHorario.cs" />
-    <Compile Include="BLL\BllPersonal.cs" />
     <Compile Include="BLL\BllSalario.cs" />
-    <Compile Include="DataSets\DBHotelGloriaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBHotelGloriaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSets\DBHotelGloriaDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBHotelGloriaDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSets\DBHotelGloriaDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBHotelGloriaDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UI\viewAgregarPersonal.cs">
+    <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\viewAgregarPersonal.Designer.cs">
-      <DependentUpon>viewAgregarPersonal.cs</DependentUpon>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\viewBuscarPersonal.cs">
+    <Compile Include="UI\.Designer.cs" />
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\viewBuscarPersonal.Designer.cs">
-      <DependentUpon>viewBuscarPersonal.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\viewModificarPersonal.cs">
+    <Compile Include="UI\viewBIen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\viewModificarPersonal.Designer.cs">
-      <DependentUpon>viewModificarPersonal.cs</DependentUpon>
+    <Compile Include="UI\viewBIen.Designer.cs">
+      <DependentUpon>viewBIen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewProducto.Designer.cs">
+      <DependentUpon>viewProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewRegProveedro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewRegProveedro.Designer.cs">
+      <DependentUpon>viewRegProveedro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewRegTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewRegTransporte.Designer.cs">
+      <DependentUpon>viewRegTransporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewMantenimiento.Designer.cs">
+      <DependentUpon>viewMantenimiento.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\viewPersonal.cs">
       <SubType>Form</SubType>
@@ -96,6 +110,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\viewRegHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewRegHabitaciones.Designer.cs">
+      <DependentUpon>viewRegHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewRolesPersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewRolesPersonal.Designer.cs">
+      <DependentUpon>viewRolesPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewSucursal.Designer.cs">
+      <DependentUpon>viewSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\viewRegEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\viewRegEventos.Designer.cs">
+      <DependentUpon>viewRegEventos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,51 +143,39 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\viewAgregarPersonal.resx">
-      <DependentUpon>viewAgregarPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\viewBuscarPersonal.resx">
-      <DependentUpon>viewBuscarPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="UI\viewBIen.resx">
+      <DependentUpon>viewBIen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\viewModificarPersonal.resx">
-      <DependentUpon>viewModificarPersonal.cs</DependentUpon>
+    <EmbeddedResource Include="UI\viewProducto.resx">
+      <DependentUpon>viewProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\viewRegProveedro.resx">
+      <DependentUpon>viewRegProveedro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\viewRegTransporte.resx">
+      <DependentUpon>viewRegTransporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\viewMantenimiento.resx">
+      <DependentUpon>viewMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\viewPersonal.resx">
       <DependentUpon>viewPersonal.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSets\DBHotelGloriaDataSet.xsc">
-      <DependentUpon>DBHotelGloriaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBHotelGloriaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet.xss">
-      <DependentUpon>DBHotelGloriaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet1.xsc">
-      <DependentUpon>DBHotelGloriaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBHotelGloriaDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet1.xss">
-      <DependentUpon>DBHotelGloriaDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet2.xsc">
-      <DependentUpon>DBHotelGloriaDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBHotelGloriaDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSets\DBHotelGloriaDataSet2.xss">
-      <DependentUpon>DBHotelGloriaDataSet2.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="UI\viewRegHabitaciones.resx">
+      <DependentUpon>viewRegHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\viewRolesPersonal.resx">
+      <DependentUpon>viewRolesPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\viewSucursal.resx">
+      <DependentUpon>viewSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\viewRegEventos.resx">
+      <DependentUpon>viewRegEventos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,6 +189,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DataSets\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

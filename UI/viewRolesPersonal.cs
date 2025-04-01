@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelGloriaDataBase
+namespace HotelGloriaDataBase.UI
 {
-    public partial class viewModificarPersonal : Form
+    public partial class viewRolesPersonal : Form
     {
-        public viewModificarPersonal()
+        public viewRolesPersonal()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

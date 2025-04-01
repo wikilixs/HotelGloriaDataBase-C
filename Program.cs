@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HotelGloriaDataBase.UI;
+
 
 namespace HotelGloriaDataBase
 {
@@ -16,7 +18,7 @@ namespace HotelGloriaDataBase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new viewAgregarPersonal());
+            Application.Run(new Form2());
         }
     }
 }
